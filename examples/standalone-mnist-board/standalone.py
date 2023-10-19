@@ -3,11 +3,10 @@ import sys
 
 import torch
 from sklearn.manifold import TSNE
-
+torch.manual_seed(0)
+sys.path.append("../../")
 from fedlab.contrib.algorithm import SyncServerHandler
 
-sys.path.append("../../")
-torch.manual_seed(0)
 from fedlab.board import fedboard
 from fedlab.board.fedboard import RuntimeFedBoard
 from pipeline.server_side import ExamplePipeline, ExampleHandler
